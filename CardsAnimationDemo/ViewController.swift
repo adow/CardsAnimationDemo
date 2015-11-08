@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var start_offset_y : CGFloat = 0.0
     /// 轮转中的照片列表
     var carouselImages:[UIImage] = []
-    /// 照片列表
+    /// 真正的照片列表
     var images : [UIImage] = [] {
         didSet{
             carouselImages.removeAll()
@@ -64,6 +64,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         self.collectionView.layoutIfNeeded()
+        /// 在开始的时候就滚动到中间一组
         let max_offset_y = self.collectionView.contentSize.height - self.collectionView.bounds.height
 //        self.start_offset_y = floor(max_offset_y / 2.0 / 30.0) * 30.0 + 30.0 * CGFloat(self.images.count)
         self.start_offset_y = floor(max_offset_y / 2.0 / 30.0) * 30.0 - 30.0 * CGFloat(self.images.count)
@@ -106,6 +107,7 @@ extension ViewController:UICollectionViewDataSource, UICollectionViewDelegate {
     }
 }
 extension ViewController:UIScrollViewDelegate {
+    /// 滚动的时候判断边界距离进行跳转
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let translate = scrollView.contentOffset.y - self.start_offset_y
         NSLog("scroll:%f, %f", scrollView.contentOffset.y, translate)

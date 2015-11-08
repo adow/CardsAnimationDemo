@@ -109,6 +109,7 @@ class CardsCollectionViewLayout: UICollectionViewFlowLayout {
     override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         return self.attributesList
     }
+    /// 吸附到固定的位置
     override func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
 //        print("offset:\(proposedContentOffset)")
         /// 每个 cell 之间的 y 距离是30.0，所以要保证最后停在 30.0 的整数倍上面
