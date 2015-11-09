@@ -1,6 +1,7 @@
 # CardsAnimationDemo
 
 
+![CardsAnimationDemo.gif](http://7vihfk.com1.z0.glb.clouddn.com/CardsAnimationDemo.gif)
 
 ## 介绍
 
@@ -217,9 +218,12 @@ CardsViewControllerViewLayout 继承自 UICollectionFlowLayout, 但其实并没�
                 scrollView.setContentOffset(CGPointMake(0.0, self.start_offset_y), animated: false)
             }
         }
+        
 
 ## Demo
         
+最后实现的代码: 
+
 [CardsAnimationDemo](https://github.com/adow/CardsAnimationDemo/tree/master)
         
 ## 参考
