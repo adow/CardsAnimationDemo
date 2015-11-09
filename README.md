@@ -70,9 +70,9 @@ CardsViewControllerViewLayout 继承自 UICollectionFlowLayout, 但其实并没�
 
 `func collectionViewContentSize() -> CGSize` 用来告诉 `UICollectionView` 内容区域的大小，因为我们并不是挨着整齐排列的，所以并不能把每个 cell 的大小相加就可以的，如果设置的太小就会让很多 cell 并不能出来，因为滚动区太小了，出不来。如果设置的太大又会拖动了一下就到空的地方去了。还好我们这里并不需要精确的计算整个内容去的大小（其实也可以计算出来），因为我们要做成无限轮转的滚动，他的原理就在于，当我们往上或者往下滚动到一个位置时，会突然跳转到另一个位置，因为我们仔细编排了每个 cell 的位置，所以使得这个跳转的过程看不出来而已。我们将在无限轮转的部分来讨论这个实现。
 
-`override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
-        return true
-    }`
+    override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
+            return true
+        }
 
 这个必须要设置为 true，因为我们需要在滚动的时候实时修改 layout。
 
