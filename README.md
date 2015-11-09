@@ -54,8 +54,6 @@ CardsAnimationDemo 源于有一天我在网上看到的一篇文章: http://www.
 
 ## CardsCollectionViewLayout 和 卡片翻转动画
 
-### 先来说说可怕的 UICollectionViewLayout
-
 UICollectionViewLayout 的确才是 UICollectionView 魔术的精髓所在，因为有 layout，才使得他区别于 UITableView，layout 真正控制了 UICollectionView 中所有 cell 的位置。
 
 ### CardsCollectionViewLayout
@@ -222,10 +220,8 @@ CardsViewControllerViewLayout 继承自 UICollectionFlowLayout, 但其实并没�
 
 ## Demo
         
-最后实现的代码: 
-
-[CardsAnimationDemo](https://github.com/adow/CardsAnimationDemo/tree/master)
+最后实现的代码: [CardsAnimationDemo](https://github.com/adow/CardsAnimationDemo/tree/master)
         
 ## 参考
 
-* [如何实现炫酷的卡片式动画！] (http://www.cocoachina.com/ios/20151013/13700.html)
+* [如何实现炫酷的卡片式动画！](http://www.cocoachina.com/ios/20151013/13700.html)
