@@ -23,7 +23,7 @@ CardsAnimationDemo 源于有一天我在网上看到的一篇文章: http://www.
 
 `ViewController` 是整个 App 的 `rootViewController`, 他只做了很少的一部分工作，基本上就是作为 `UICollectionView` 的 `dataSource` 和 `delegate` 存在的。
 
-还有需要说明的是整个项目中的代码中使用了 Autolayout，因此如果把这些代码应用到你的项目中时，需要考虑是不是有布局的兼容性问题。在我的其他项目中，我大范围使用 Cartography 和 SnapKit 作为布局工具，他们让我大大减少了写那些恶心的约束代码的时间。但在这个项目中，我直接写了约束代码而不是使用第三方工具，毕竟我不想在这里依赖任何第三方库。
+还有需要说明的是整个项目中的代码中使用了 Autolayout，因此如果把这些代码应用到你的项目中时，需要考虑是不是有布局的兼容性问题。在我的其他项目中，我大范围使用 Cartography 和 SnapKit 作为布局工具，他们让我大大减少写约束代码的时间。但在这个项目中，我直接写了约束代码而不是使用第三方工具，毕竟我不想在这里依赖任何第三方库。
 
 ## UICollectionView
 
@@ -61,6 +61,7 @@ CardsAnimationDemo 源于有一天我在网上看到的一篇文章: http://www.
 UICollectionViewLayout 的确才是 UICollectionView 魔术的精髓所在，因为有 layout，才使得他区别于 UITableView，layout 真正控制了 UICollectionView 中所有 cell 的位置。
 
 ### CardsCollectionViewLayout
+
 CardsViewControllerViewLayout 继承自 UICollectionFlowLayout, 但其实并没有使用任何 UICollectionFlowLayout 的方法和属性，因为我们的 cell 的坐标都是单独计算出来的。
 
 需要注意的是， layout 并不是直接修改 cell 的 `frame`, `bounds`, `transform` 这些属性来实现 cell 的布局的，而是通过 `UICollectionViewLayoutAttributes` 对象来设置相应的 cell 的位置属性。
@@ -224,7 +225,7 @@ CardsViewControllerViewLayout 继承自 UICollectionFlowLayout, 但其实并没�
 
 ## Demo
         
-最后实现的代码: [CardsAnimationDemo](https://github.com/adow/CardsAnimationDemo/tree/master)
+最后实现的代码: [CardsAnimationDemo](https://github.com/adow/CardsAnimationDemo)
         
 ## 参考
 
