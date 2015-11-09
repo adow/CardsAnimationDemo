@@ -3,6 +3,10 @@
 
 ![CardsAnimationDemo.gif](http://7vihfk.com1.z0.glb.clouddn.com/CardsAnimationDemo.gif)
 
+[实现效果视频](http://v.youku.com/v_show/id_XMTM4MTYyNTY2NA==.html)
+
+
+
 ## 介绍
 
 CardsAnimationDemo 源于有一天我在网上看到的一篇文章: http://www.cocoachina.com/ios/20151013/13700.html，作者详细的介绍了如何实现这个卡片动画的全部过程。
